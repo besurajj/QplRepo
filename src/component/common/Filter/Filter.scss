@@ -1,0 +1,137 @@
+@import "../../../assets/_var.scss";
+
+.filter_form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  @media (max-width: 1440px) {
+    // margin-bottom: 2rem;
+  }
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+
+  // width: 100%;
+
+  .admin_form {
+    display: flex;
+
+    @media (max-width: 575px) {
+      display: block;
+    }
+
+    .filter_dropdown {
+      p {
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: #000;
+        margin-bottom: 0.8rem;
+      }
+
+      .buy_dropdown {
+        margin-right: 1.6rem;
+
+        @media (max-width: 575px) {
+          margin-right: 0;
+        }
+
+        .dropdown-toggle {
+          background-color: $graybg;
+          border-radius: 1rem;
+          border: none;
+          height: 6rem;
+          color: $gray2;
+          font-weight: 500;
+          padding: 1.8rem 2.1rem;
+
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+
+          &::after {
+            background: url("../../../assets/images/icons/green-down-arrow.svg");
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+
+    .common_input {
+      margin-right: 1.6rem;
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @media (max-width: 767px) {
+        margin-right: 0;
+      }
+
+      .common_input_inner {
+        .form_date {
+          flex-direction: row-reverse;
+          color: $gray2;
+          gap: 0.8rem;
+        }
+      }
+    }
+
+    .filter_select {
+      margin-right: 1.6rem;
+      width: 200px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @media (max-width: 575px) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .exportBtn {
+    height: 5.1rem;
+    margin-top: 2.7rem;
+
+    @media (max-width: 767px) {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .admin_form {
+      flex-wrap: wrap;
+
+      >div {
+        flex: 1 1 50%;
+        // margin-right: 1rem !important;
+      }
+    }
+
+    .exportBtn {
+      width: calc(50% - 1rem);
+    }
+  }
+
+  @media (max-width: 575px) {
+    margin-right: 0;
+  }
+
+  .form_search {
+    min-width: 350px;
+
+    @media (max-width: 575px) {
+      min-width: 100%;
+    }
+  }
+}

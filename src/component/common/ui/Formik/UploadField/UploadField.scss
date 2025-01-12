@@ -1,0 +1,72 @@
+@import "../../../../../assets/_var.scss";
+
+.uploadField {
+  margin-bottom: 2.4rem;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    small {
+      margin-left: 2.5rem;
+      transition: all 0.25s linear;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: $lightGray2;
+
+      @media (max-width: 767px) {
+        font-size: 1.2rem;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  .form-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  &__inner {
+    position: relative;
+    width: 100%;
+    padding: 2.2rem 4.5rem;
+    border: 1px dashed $lightGray2;
+    border-radius: 0.8rem;
+    transition: all 0.25s linear;
+    svg {
+      path {
+        transition: all 0.25s linear;
+      }
+    }
+
+    &:hover {
+      border-color: $secondaryColor;
+      svg {
+        path {
+          stroke: $secondaryColor;
+        }
+      }
+      small {
+        color: $secondaryColor;
+      }
+    }
+  }
+
+  &--error {
+    .uploadField__inner {
+      border-color: $redColor2;
+
+      svg {
+        path {
+          stroke: $redColor2;
+        }
+      }
+      small {
+        color: $redColor2;
+      }
+    }
+  }
+}

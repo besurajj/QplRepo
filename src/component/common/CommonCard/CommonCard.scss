@@ -1,0 +1,332 @@
+@import "../../../assets/_var.scss";
+
+.common_card {
+  background-color: $white;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  // @extend %transition;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(5rem);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  justify-content: space-between;
+
+  // border: 1px solid $F2F2F2;
+  &_like {
+    position: absolute;
+    right: 2.5rem;
+    top: 2rem;
+    z-index: 1;
+  }
+
+  &_thumb {
+    &_outer {
+      overflow: hidden;
+      border-radius: 1.5rem;
+    }
+
+    height: 217px;
+    max-height: 25.6rem;
+    border-radius: 1.5rem;
+    position: relative;
+
+    img {
+      height: 217px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 1.5rem;
+      transition: 200ms ease-in-out;
+    }
+
+    &_hash {
+      color: $white;
+      font-size: 1.1rem;
+      background: rgba(51, 51, 51, 0.26);
+      backdrop-filter: blur(4.5px);
+      font-weight: 500;
+      border-radius: 1rem;
+      max-width: 9rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      padding: 1.6rem 0;
+    }
+  }
+
+  &_head {
+    padding: 1.6rem 0 0.6rem;
+
+    h4 {
+      color: $black;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: block;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    p {
+      margin: 0;
+      color: $gray2;
+      font-size: 1.6rem;
+      margin-top: 0.6rem;
+    }
+  }
+
+  &_value {
+    color: $gray2;
+  }
+
+  span {
+    margin: 0;
+    color: $black;
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+  }
+
+  &_price {
+    padding: 1.1rem 0 1.3rem;
+    position: relative;
+
+    &_left,
+    &_right,
+    span {
+      color: $black;
+      font-size: 1.6rem;
+      font-weight: 400;
+      display: block;
+      padding-bottom: 1rem;
+    }
+
+    &_right {
+      text-align: right;
+      padding-bottom: 0;
+
+      .commonBtn {
+        min-width: inherit;
+        width: 100%;
+        max-width: 14.4rem;
+        color: $secondaryColor;
+
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
+    }
+
+    h5 {
+      font-weight: 600;
+      color: $secondaryColor;
+      display: block;
+      margin: 0;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      svg {
+        vertical-align: top;
+        position: relative;
+        bottom: -1px;
+        margin-right: 0.7rem;
+        width: 2.3rem;
+        height: 2.3rem;
+      }
+    }
+  }
+
+  @media (max-width: 1679px) {
+    &_like {
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    &_head {
+      padding: 2rem 0;
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+    &_thumb {
+      &_hash {
+        padding: 1rem;
+        font-size: 1rem;
+        max-width: 7rem;
+      }
+    }
+
+    &_price {
+      padding: 0;
+
+      &_left {
+        >span {
+          padding-bottom: 0;
+          font-size: 1.4rem;
+        }
+
+        svg {
+          width: 1.6rem;
+          bottom: 0;
+          top: -1px;
+        }
+      }
+
+      &_right {
+        .commonBtn {
+          padding: 1rem;
+          line-height: 1;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .common_card {
+      &_thumb {
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      &_action {
+        span {
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &.flex-row {
+    box-shadow: none;
+    align-items: center;
+    border: 0;
+
+    .common_card {
+      &_thumb {
+        position: relative;
+        max-height: inherit;
+
+        &_outer {
+          max-width: 50%;
+          height: 100%;
+          flex: 0 0 50%;
+          position: relative;
+
+          button {
+            top: 1.2rem;
+            right: 1.5rem;
+
+            svg {
+              height: 4.8rem;
+              width: 4.8rem;
+            }
+          }
+        }
+      }
+
+      &_content {
+        // max-width: 16rem;
+        max-width: 19rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      &_head {
+        padding: 0;
+
+        h4 {
+          padding-top: 2rem;
+        }
+
+        @media (min-width: 1680px) {
+          h4 {
+            font-size: 2.4rem;
+          }
+        }
+      }
+
+      &_price {
+        padding: 0;
+
+        h5 {
+          margin: 1.2rem 0;
+        }
+
+        @media (min-width: 1680px) {
+          h5 {
+            font-size: 2rem;
+          }
+        }
+
+        >div {
+          flex-direction: column;
+
+          >div {
+            padding: 0 1.5rem !important;
+
+            >div {
+              text-align: left !important;
+
+              @media (max-width: 1199px) {
+                text-align: center !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 1199px) {
+      flex-direction: column !important;
+
+      .common_card {
+        &_thumb {
+          &_outer {
+            // flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+
+        &_content {
+          max-width: 100%;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  //   &.full-img-card {
+  //     .common_card_thumb_outer {
+  //       flex: 0 0 70%;
+  //     }
+  //     .common_card_price_left {
+  //       padding-bottom: 0;
+  //     }
+  //   }
+}

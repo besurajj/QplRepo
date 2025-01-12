@@ -1,0 +1,211 @@
+@import '../../../../../assets/_var.scss';
+
+.update_point_modal {
+    .modal-dialog {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+        padding: 0 15px;
+
+
+
+        .modal-content {
+            border-radius: 30px;
+            background: #DAF6FF;
+            border: 1px solid #001F5433;
+            max-width: 100%;
+
+            @media (max-width:767px) {
+                border-radius: 20px;
+            }
+
+            @media (max-width:575px) {
+                border-radius: 10px;
+            }
+
+            .modal-header {
+                color: $blue54;
+                border-bottom: none;
+                padding: 15px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .modal-title {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .btn-close {
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+
+                .close {
+                    font-size: 22px;
+                    color: #fff;
+                    opacity: 0.8;
+                    cursor: pointer;
+                    box-shadow: none;
+
+                    &:hover {
+                        color: #fff;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .modal-body {
+                padding: 30px 20px;
+
+                @media (max-width:575px) {
+                    padding: 16px;
+                }
+
+                .upadate_point_form {
+                    >div {
+                        background: white;
+                        box-shadow: 20px 20px 40px 0px #00000014;
+                        margin-bottom: 10px;
+                        padding: 20px;
+                        border-radius: 8px;
+
+                        @media (max-width:1399px) {
+                            padding: 16px;
+
+                        }
+
+                        @media (max-width:575px) {
+                            font-size: 10px;
+                        }
+
+                        &:not(:last-child) {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+
+                            .form-label {
+                                font-size: 1.8rem;
+                                color: #001F54;
+
+                                @media (max-width:1399px) {
+                                    font-size: 1.6rem;
+                                }
+
+                                @media (max-width:575px) {
+                                    font-size: 1.4rem;
+                                }
+                            }
+
+                            p {
+                                color: #001f5499;
+
+                            }
+                        }
+                    }
+                }
+
+                .form-label {
+                    font-size: 1.8rem;
+                    color: #001F54;
+                }
+
+
+                .form-control {
+                    border: 1px solid #CCD2DD;
+                    background-color: $white;
+                    color: #001F54;
+                    border-radius: 0.8rem;
+                    padding: 1.25rem 2rem;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    width: 100%;
+                    outline: none;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .modal-footer {
+                padding: 40px 20px;
+                display: flex;
+                flex-wrap: nowrap;
+                border-top: 0;
+                padding-top: 0;
+                gap: 20px;
+
+                @media (max-width:1399px) {
+                    padding: 20px;
+                }
+
+                @media (max-width:575px) {
+                    padding: 10px;
+                    gap: 10px;
+
+                }
+
+                >* {
+                    width: 50%;
+                }
+
+                .close_btn {
+                    background: conic-gradient(from 90deg at 50% 50%, #FFBF94 0deg, #FFF6ED 360deg);
+                    color: #001F54;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    border: 2px solid #FFFFFF;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 54px;
+
+                    @media (max-width:767px) {
+                        height: 4rem;
+                        font-size: 1.4rem;
+                    }
+
+                    @media (max-width:575px) {
+                        height: 4rem;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                    }
+                }
+
+                .cancel_btn {
+                    color: #001F54;
+                    background: transparent;
+                    border-radius: 8px;
+                    z-index: 1;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 54px;
+
+
+                    @media (max-width:767px) {
+                        height: 4rem;
+                        font-size: 1.4rem;
+                    }
+
+                    @media (max-width:575px) {
+                        height: 4rem;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

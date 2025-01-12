@@ -1,0 +1,58 @@
+@import "../../../../../assets/_var.scss";
+
+.success-modal {
+  .modal-dialog {
+    max-width: 83rem;
+
+    @media (max-width: 1679px) {
+      max-width: 60rem;
+    }
+  }
+  .modal-body {
+    padding: 9rem 11.2rem;
+    @media (max-width: 1679px) {
+      padding: 6rem;
+    }
+
+    @media (max-width: 991px) {
+      padding: 4rem;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    @media (max-width: 991px) {
+      max-width: 10rem;
+    }
+  }
+
+  &__img {
+    margin-top: 10.6rem;
+    margin-bottom: 8rem;
+    @media (max-width: 1679px) {
+      margin: 4rem 0;
+    }
+    @media (max-width: 991px) {
+      margin: 2rem 0;
+    }
+    img {
+      @media (max-width: 1679px) {
+        max-width: 18rem;
+      }
+      @media (max-width: 991px) {
+        max-width: 12rem;
+      }
+    }
+  }
+  h3 {
+    margin-bottom: 1.5rem;
+  }
+  p {
+    color: $lightGray;
+    margin-bottom: 4rem;
+
+    @media (max-width: 991px) {
+      margin-bottom: 2rem;
+    }
+  }
+}

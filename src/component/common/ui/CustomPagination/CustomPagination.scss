@@ -1,0 +1,78 @@
+@import "../../../../assets/_var.scss";
+
+.custom_paginate {
+    justify-content: center;
+
+    .page-item {
+        .page-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $secondaryColor;
+            border: none;
+            background-color: $graylight;
+            margin-right: 0.6rem;
+            font-weight: 600;
+            font-size: 1.6rem;
+            width: 3.6rem;
+            height: 3.6rem;
+            border-radius: 0.4rem;
+
+            &:focus {
+                box-shadow: unset;
+            }
+
+            &:first-child {
+
+                span {
+                    display: none;
+                }
+            }
+        }
+
+        &.active {
+            .page-link {
+                background-color: $secondaryColor;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+
+        &:first-child {
+            .page-link {
+                background-color: transparent;
+                background-image: url(../../../../assets/images/icons/prev-arrow.svg);
+                background-repeat: no-repeat;
+                background-size: 9px;
+                background-position: center;
+
+                &:hover {
+                    fill: black;
+                }
+            }
+        }
+
+        &:last-child {
+            .page-link {
+                background-color: transparent;
+                background-image: url(../../../../assets/images/icons/next-arrow.svg);
+                background-repeat: no-repeat;
+                background-size: 9px;
+                background-position: center;
+            }
+        }
+    }
+
+    .ellipsis {
+        .page-link {
+            background: none;
+
+            span {
+                display: block !important;
+            }
+        }
+    }
+
+
+
+}

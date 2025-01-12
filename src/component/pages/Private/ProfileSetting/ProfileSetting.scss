@@ -1,0 +1,129 @@
+@import '../../../../assets/_var.scss';
+
+.Admin_profile {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 550px;
+
+    .profile_setting {
+        .profile_account {
+            background: rgba($white, 0.06);
+            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.09);
+            border-radius: 0.8rem;
+            padding: 2rem 2rem 3rem;
+            text-align: center;
+
+            @media (max-width:575px) {
+                padding: 1rem;
+            }
+
+            .profile_img {
+                position: relative;
+                width: 100%;
+                max-width: 108px;
+                margin: 0 auto;
+
+                img {
+                    border-radius: 5rem;
+                    width: 75px;
+                    height: 75px;
+                }
+
+                .camera_img {
+                    position: absolute;
+                    width: 3rem;
+                    height: 3rem;
+                    background-color: $bg-main;
+                    border: 1px solid $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 5rem;
+                    top: -4px;
+                    right: 1px;
+
+                    .upload__input {
+                        position: absolute;
+                        opacity: 0;
+                    }
+
+                    img {
+                        width: 1.6rem;
+                        // height: 1.3rem;
+                    }
+                }
+            }
+
+            .profile_title {
+                font-weight: 500;
+                color: $black;
+                font-size: 2.2rem;
+                margin-top: 2rem;
+
+                @media (max-width:1399px) {
+                    font-size: 1.8rem;
+                }
+
+                @media (max-width:767px) {
+                    // font-size: 1.8rem;
+
+                }
+
+                @media (max-width:575px) {
+                    margin-top: 0;
+                }
+            }
+
+            .profile_mailId {
+                color: $gray2;
+                font-weight: 500;
+                margin-top: 1rem;
+            }
+        }
+
+        .changePwd_account {
+            background: rgba($white, 0.06);
+            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.09);
+            border-radius: 0.8rem;
+            padding: 2.8rem 5rem;
+            margin-top: 1.6rem;
+
+            @media (max-width:575px) {
+                padding: 2.8rem;
+            }
+
+            .common_input {
+                margin-bottom: 2.4rem;
+            }
+
+            h5 {
+                font-weight: 500;
+                color: #298260;
+                font-size: 2.2rem;
+                margin-bottom: 4.2rem;
+                text-align: center;
+
+                @media (max-width:575px) {
+                    margin-bottom: 2rem;
+                font-size: 1.6rem;
+                }
+            }
+
+            .update_btn {
+                margin-top: 1.2rem;
+            }
+
+            .eyeIcon {
+                top: 53px;
+
+                @media (max-width:1679px) {
+                    top: 40px;
+                }
+
+                @media (max-width:575px) {
+                    top: 34px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import "../../../../assets/_var.scss";
+
+.other-auth {
+  p {
+    margin: 3.7rem 0;
+    color: $lightGray2;
+
+    @media (max-width: 1679px) {
+      margin: 2rem 0;
+    }
+    @media (max-width: 575px) {
+      margin: 1rem 0;
+    }
+  }
+  &__btns {
+    display: flex;
+    gap: 1.2rem;
+
+    li {
+      flex: 1 0;
+    }
+
+    .outline-btn {
+      padding: 1.75rem;
+
+      @media (max-width: 1679px) {
+        min-width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+      }
+      @media (max-width: 575px) {
+        min-width: 4rem;
+        height: 4rem;
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}

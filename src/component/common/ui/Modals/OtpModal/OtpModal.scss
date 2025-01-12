@@ -1,0 +1,35 @@
+.otp-verification-modal .modal-content {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.otp-verification-modal {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.otp-verification-modal .modal-header {
+    padding-top: 1.5rem;
+}
+
+.otp-verification-modal .modal-header .close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.otp-verification-modal input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.otp-verification-modal input[type="number"]::-webkit-inner-spin-button,
+.otp-verification-modal input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.otp-verification-modal input:focus {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25) !important;
+}

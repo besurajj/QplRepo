@@ -1,0 +1,48 @@
+// @import "../../../Assets/Theme/_var.scss";
+
+.loader-outer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 11111;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loader-animation {
+    width: 40px;
+    height: 40px;
+    color: #cc1e45;
+    background: linear-gradient(currentColor 0 0),
+      linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0),
+      linear-gradient(currentColor 0 0);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    animation: animationloader 1.25s infinite cubic-bezier(0.3, 1, 0, 1);
+  }
+
+  @keyframes animationloader {
+    0% {
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    }
+
+    33% {
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+      width: 60px;
+      height: 60px;
+    }
+
+    66% {
+      background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+      width: 60px;
+      height: 60px;
+    }
+
+    100% {
+      background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../../../assets/_var.scss";
+
+.primary-layout {
+  display: flex;
+
+  &__left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all ease-in-out 0.3s;
+    // z-index: 9;
+    z-index: 1000;
+  }
+
+  &__right {
+    // width: calc(100% - 300px);
+    width: 100%;
+    padding-left: 250px;
+    transition: all ease-in-out 0.3s;
+
+    // @media (max-width: 1599px) {
+    //     padding-left: 280px;
+    //   }
+
+    // @media (max-width: 1199px) {
+    //     width: 100%;
+
+    // }
+
+    @media (max-width: 991px) {
+      width: 100%;
+      padding-left: 0px;
+    }
+
+    &__pages {
+      padding: 3.6rem 5rem;
+      overflow-y: auto;
+      height: calc(100vh - 73px);
+      position: relative;
+      z-index: 1;
+
+      @media (max-width: 1199px) {
+        padding: 2rem 1.5rem;
+        height: calc(100vh - 136px);
+      }
+
+      @media (max-width: 991px) {
+        height: auto;
+      }
+
+      @media (max-width: 767px) {
+        height: auto;
+        padding: 2.5rem 1.5rem;
+      }
+
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: $secondaryColor;
+      }
+    }
+  }
+}

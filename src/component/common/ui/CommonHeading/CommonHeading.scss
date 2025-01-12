@@ -1,0 +1,17 @@
+@import "../../../../assets/_var.scss";
+
+.common-heading {
+  h3 {
+    margin-bottom: 2.5rem;
+
+    @media (max-width: 1679px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  p {
+    color: $lightGray;
+    width: 100%;
+    max-width: 325px;
+  }
+}

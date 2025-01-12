@@ -1,0 +1,136 @@
+@import "../../../../assets/_var.scss";
+
+.login-page {
+  .auth-card {
+    padding: 53px 32px 69px;
+
+    // @media (max-width: 1679px) {
+    //   padding-top: 4rem;
+    //   padding-bottom: 4rem;
+    // }
+    @media (max-height: 767px) {
+      padding: 20px;
+    }
+
+    .common-heading {
+      margin-bottom: 4.3rem;
+
+      @media (max-width: 1679px) {
+        margin-bottom: 2rem;
+      }
+
+      // @media (max-width: 991px) {
+      //   margin-bottom: 2rem;
+      // }
+    }
+  }
+
+  &__frgtPswd {
+    color: #6f7e8c;
+    margin-top: -2.5rem;
+    margin-bottom: 3.6rem;
+
+    &:hover {
+      color: $black;
+    }
+
+    @media (max-width: 1679px) {
+      margin-top: -1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 575px) {
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__loginBtn {
+    border-radius: 8px;
+    // background: #16aeb5;
+    // border-color: #16aeb5;
+    height: 60px;
+
+    @media (max-width: 991px) {
+      height: 40px;
+    }
+
+    svg {
+      margin-left: 0.5rem;
+    }
+
+    &:hover {
+      // color: #16aeb5;
+
+      svg {
+        path {
+          fill: $secondaryColor;
+        }
+      }
+    }
+  }
+}
+
+.sign-up {
+  h5 {
+    margin-bottom: 2.5rem;
+    color: $secondaryColor;
+
+    @media (max-width: 1679px) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.otp-verification {
+  .resend-text {
+    padding: 3.5rem 0;
+
+    @media (max-width: 1679px) {
+      padding: 2rem 0;
+    }
+
+    span {
+      cursor: pointer;
+
+      &:first-child {
+        color: $secondaryColor;
+        margin-bottom: 3rem;
+        transition: all linear 0.25s;
+
+        @media (max-width: 1679px) {
+          margin-bottom: 1.5rem;
+        }
+
+        &:hover {
+          color: $baseColor;
+        }
+      }
+    }
+  }
+}
+
+.change_pwd {
+  .common-heading {
+    margin-bottom: 3.6rem !important;
+
+    // p {
+    //   display: none;
+    // }
+  }
+
+  // .group_form {
+  //   position: relative;
+
+  //   .eyeIcon {
+  //     position: absolute;
+  //     right: 0;
+  //     top: 0;
+  //   }
+  // }
+}
+
+.forgotPass {
+  text-align: right;
+  margin: 15px;
+}

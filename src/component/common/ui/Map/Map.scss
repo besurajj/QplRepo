@@ -1,0 +1,145 @@
+@import "../../../../assets/_var.scss";
+
+.hotel-map {
+  height: 400px; /* Adjust the height as needed */
+  width: 100%; /* Adjust the width as needed */
+  border-radius: 1.6rem;
+  min-height: 35vh;
+  position:fixed;
+
+
+  .gm-style {
+    .gm-style-iw-c {
+      border: 0.1rem solid $F2F2F2;
+      box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+    }
+    .gm-control-active {
+      &.gm-fullscreen-control {
+        box-shadow: $boxShadow2 !important;
+        border-radius: 0.8rem !important;
+      }
+    }
+
+    .gm-bundled-control {
+      .gmnoprint {
+        box-shadow: $boxShadow2;
+        border-radius: 0.8rem;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.map-popover {
+  background: $white;
+  padding-left: 0.5rem;
+  border-radius: 1rem;
+  min-width: 40rem;
+  max-width: 40rem;
+  &__content {
+    padding: 0 1rem 1rem;
+    font-family: $baseFont;
+
+    h3,
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 0.7rem;
+    }
+
+    p {
+      color: $gray5;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    &_content {
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 42.55%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+.view-button {
+  color: $white;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1.4rem 3.8rem;
+  background-color: $secondaryColor;
+}
+
+.img-thumb {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 0.7rem solid $white;
+
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(236, 236, 236, 1) 8%,
+    rgba(245, 245, 245, 1) 18%,
+    rgba(236, 236, 236, 1) 30%
+  );
+
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1.5s shine linear infinite;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    outline: 0;
+  }
+
+  &.img-empty {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  
+  }
+}
+
+
+
+@keyframes shine {
+  to {
+    background-position-x: -20%;
+  }
+}

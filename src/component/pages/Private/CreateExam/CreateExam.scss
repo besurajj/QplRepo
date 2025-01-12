@@ -1,0 +1,104 @@
+.exam_form {
+  padding: 2rem;
+  background-color: #f4f7fa; // Light background color.
+
+  // .exam_form {
+    .form_table {
+      width: 100%;
+      margin: 0 auto;
+
+      thead {
+        tr {
+          th {
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: left;
+            padding: 2rem;
+            color: Black; 
+
+            &:nth-child(2) {
+              text-align: left;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 2rem;
+
+            &:first-child {
+              font-weight: 500;
+              color: #495057; // Secondary color (dark gray).
+              width: 30%;
+            }
+
+            &:last-child {
+              width: 50%;
+
+              .form-control {
+                font-size: 1.4rem;
+                padding: 0.8rem 1.2rem;
+                border-radius: 5px;
+                border: 1px solid #ccd2dd; // Border color (light gray).
+                width: 100%;
+                background-color: #ffffff; // White background for input fields.
+                color: #212529; // Dark text color.
+
+                &:focus {
+                  border-color: #007bff; // Primary color (blue) on focus.
+                  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); // Focus shadow.
+                }
+              }
+
+              .error-message {
+                font-size: 1.2rem;
+                color: #dc3545; // Error color (red).
+                margin-top: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+    .form_actions {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      .btn {
+        font-size: 1.5rem; // Larger font size.
+        padding: 1rem 2rem; // Larger button size.
+        border-radius: 8px;
+        text-transform: uppercase;
+width: 100%;
+align-items: center;
+        &.btn-primary {
+          background-color: #007bff; // Primary button color (blue).
+          border: none;
+          width: 100%;
+          color: #ffffff; // White text.
+
+          &:hover {
+            background-color: #0056b3; // Darker blue on hover.
+          }
+        }
+
+        &.btn-secondary {
+          background-color: #6c757d; // Secondary button color (gray).
+          border: none;
+          color: #ffffff; // White text.
+
+          &:hover {
+            background-color: #5a6268; // Darker gray on hover.
+          }
+        }
+      }
+    }
+  }
+// }

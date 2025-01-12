@@ -1,0 +1,23 @@
+@import "../../../../assets/_var.scss";
+
+
+.custom-tooltip {
+  position: fixed;
+
+  &.tooltip {
+    opacity: 1;
+
+    .tooltip-inner {
+      background-color: $black;
+      font-size: 1.2rem;
+      max-width: 300px;
+      padding: 0.5rem;
+    }
+
+    .tooltip-arrow {
+      &::before {
+        border-bottom-color: $black;
+      }
+    }
+  }
+}

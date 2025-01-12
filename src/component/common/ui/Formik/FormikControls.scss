@@ -1,0 +1,55 @@
+@import "../../../../assets/_var.scss";
+
+.checkboxStyle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+
+  .form-check {
+    padding-left: 3rem;
+  }
+  .form-check-input {
+    width: 3rem;
+    height: 3rem;
+    border: 0.15rem solid $border-color2;
+    border-radius: 0.8rem;
+    flex-shrink: 0;
+    @media (max-width: 1679px) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    @media (max-width: 575px) {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.4rem;
+    }
+
+    &:checked {
+      background-color: $white;
+      border-color: $white;
+      border: 0;
+    }
+    &:checked[type="checkbox"] {
+      background-image: url(../../../../assets/images/icons/check_icon.svg);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  label {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $gray;
+    margin-left: 1.5rem;
+    @media (max-width: 1679px) {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+    }
+    @media (max-width: 575px) {
+      font-size: 1rem;
+      margin-left: 0.5rem;
+    }
+  }
+}

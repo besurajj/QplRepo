@@ -1,0 +1,19 @@
+@import "../../../../../assets/_var.scss";
+
+.error_message {
+  color: $redColor;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  @media (max-width: 1679px) {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
+  @media (max-width: 575px) {
+    font-size: 1rem;
+  }
+  span {
+    margin-right: 0.4rem;
+    position: relative;
+    top: -0.18rem;
+  }
+}

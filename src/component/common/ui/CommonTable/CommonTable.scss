@@ -1,0 +1,202 @@
+@import "../../../../assets/_var.scss";
+
+.common_table {
+  border: 0.1rem solid rgba($secondaryColor, 0.4);
+  border-radius: 10px;
+
+  .table {
+    --bs-table-bg: $black;
+    margin-bottom: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    // border: 1px solid #ededed;
+
+    @media (max-width: 767px) {
+      width: 80rem;
+    }
+
+    thead {
+      tr {
+        background: rgba($white,.6);
+
+        th {
+          height: 6rem;
+          font-size: 1.4rem;
+          padding: 2rem 3.6rem;
+          font-weight: 500;
+          color: $blue54;
+          text-align: start;
+          white-space: nowrap;
+          vertical-align: middle;
+          border: 0;
+
+          @media (max-width: 1199px) {
+            padding: 2rem 3.6rem;
+          }
+
+          @media (max-width: 767px) {
+            font-size: 1.2rem;
+          }
+
+          .shimmer {
+            background-color: $blue54;
+            opacity: .7;
+          }
+        }
+      }
+    }
+
+    tbody {
+
+      tr {
+        background: $white;
+
+        &:not(:last-child) {
+          border-bottom: 0.1rem solid rgba($secondaryColor, 0.4);
+        }
+
+        td {
+          // height: 6.4rem;
+          font-size: 1.6rem;
+          text-align: start;
+          padding: 2.2rem 3.6rem;
+          vertical-align: middle;
+          color: #001F54;
+          white-space: nowrap;
+          border: 0;
+
+
+          .shimmer {
+            background-color: $blue54;
+            opacity: .7;
+          }
+
+          @media (max-width: 1199px) {
+            font-size: 1.4rem;
+            padding: 2rem 3.6rem;
+          }
+
+          @media (max-width: 767px) {
+            font-size: 1.2rem;
+          }
+
+          &:first-child {
+            // color: $black;
+            // font-weight: 500;
+          }
+
+          // span {
+          //   position: relative;
+
+          //   &::after {
+          //     display: none;
+          //     position: absolute;
+          //     top: 100%;
+          //     left: 0;
+          //     content: attr(title);
+          //     background-color: red;
+          //     color: $white;
+          //     padding: 10px;
+          //   }
+
+          //   &:hover::after {
+          //     display: block;
+          //   }
+
+          //   [title]:hover,
+          //   ::after {
+          //     opacity: 1;
+          //     transition: all 0.1s ease 0.5s;
+          //     visibility: visible;
+          //   }
+
+          //   [title]::after {
+          //     content: attr(title);
+          //     position: absolute;
+          //     bottom: -1.6em;
+          //     left: 100%;
+          //     padding: 4px 4px 4px 8px;
+          //     color: blue;
+          //     white-space: nowrap;
+          //     background-color: red;
+          //   }
+
+          //   // [title] {
+          //   //   position: relative;
+          //   // }
+          // }
+        }
+
+        .green_clr {
+          color: $secondaryColor;
+        }
+
+        .dark_clr {
+          color: $black;
+        }
+
+        .Approved {
+          color: $darkgreen;
+        }
+
+        .Pending {
+          color: $orange;
+        }
+
+        .Rejected {
+          color: $redcolor3;
+        }
+
+        .status_pending {
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-left: 0.7rem;
+            max-width: fit-content;
+          }
+
+          a {
+            cursor: pointer;
+          }
+        }
+
+        .transaction {
+          white-space: nowrap;
+
+          span {
+            margin-left: 1rem;
+          }
+        }
+
+        .passport_icon {
+          display: flex-root;
+          align-items: center;
+          gap: 1rem;
+          cursor: pointer;
+
+          span {
+            margin-left: 5px;
+          }
+        }
+
+        .action-cell {
+          display: flex !important;
+          align-items: center;
+
+          span {
+            cursor: pointer;
+            width: 36px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.placeholder-glow {
+  span {
+    border-radius: 10px;
+  }
+}

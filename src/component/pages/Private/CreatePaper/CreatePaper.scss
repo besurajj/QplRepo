@@ -1,0 +1,79 @@
+@import "../../../../assets/_var.scss";
+
+.armory {
+  .armory_table {
+    tbody {
+      tr {
+        td {
+
+          .setting_toggle {
+            .form-check-input {
+              background: url("../../../../assets/images/icons/checked_round_icon.svg"), linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)),
+                linear-gradient(270deg, #3E3E3E 8.91%, #929292 100%);
+              background-size: contain, cover;
+              background-repeat: no-repeat;
+              border-radius: 4rem;
+              background-position: left;
+              width: 3.6rem;
+              height: 1.8rem;
+              border: none;
+
+              &:checked {
+                background-image: url("../../../../assets/images/icons/checked_round_icon.svg"), linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)),
+                  linear-gradient(90deg, #FFDEC6 0%, #FFBF94 100%);
+                background-position: right;
+
+              }
+
+              &:focus {
+                box-shadow: none;
+              }
+            }
+          }
+
+
+          .setting_dropdown {
+            max-width: 150px;
+            width: 100%;
+
+            .dropdown-toggle {
+              width: 100%;
+              color: $blue54;
+              font-size: 1.4rem;
+              font-weight: 500;
+
+              &.active {
+                color: $blue54;
+              }
+            }
+
+            .dropdown-menu {
+              overflow: hidden;
+              border-radius: 4px;
+
+              .dropdown-item {
+                padding: 5px 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.referral-cell {
+  display: flex;
+  align-items: center;
+
+  h5 {
+    margin-right: 10px;
+    font-weight: 700;
+  }
+}
+
+.commonBtnsGroup {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

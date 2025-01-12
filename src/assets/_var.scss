@@ -1,0 +1,70 @@
+// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap");
+
+// $baseFont: "Open Sans", sans-serif;
+// $baseFont: "Proxi Nova", sans-serif;
+$baseFont: "Jost", sans-serif;
+
+// colors
+$black: #000;
+$white: #ffffff;
+$baseColor: #0A0A0A;
+$blue54: #001F54;
+
+
+$secondaryColor: #00E0FF;
+$btnColor: #0e0f0c;
+
+// New Base Colors
+$blueBase: #000040;
+$basePink: #ef9494;
+$baseFadePink: #ef94946e;
+
+$gray: #4f4f4f;
+$lightGray: #6e6e73;
+$lightGray2: #bbbbbb;
+$blueGray: #f8fafc;
+$extraLight: #d0d5dd;
+$redColor: #f0263c;
+$redColor2: #eb5757;
+$inputborder: #d9d9d9;
+$inputbg: #f0f0f0;
+$gray2: #7d7d7d;
+$gray3: #f6f6f6;
+$gray4: #bdbdbd;
+$graylight: #ececec;
+$borderclr: #ededed;
+$graybg: #f5f5f5;
+$graybg2: #e8e8e8;
+$gray5: #828282;
+$F2F2F2: #f2f2f2;
+// border-color
+$border-color: #e0e0e0;
+$border-color2: #e1e1df;
+$darkgreen: #00a6a6;
+$orange: #ff8a00;
+$redcolor3: #ef2323;
+$opacitygreen: rgba(0, 166, 166, 0.07);
+$lightsky: #edf9f9;
+$grey4: #333333;
+$baseText: #cc1e45;
+$inputFocus-hover: #6f7e8c;
+$bg-main: #cc1e45;
+$text-grey-heading: #6f7e8c;
+
+// gradient
+
+$baseGradient: linear-gradient(179.98deg, #DAF6FF 0.02%, #F9F9F9 81.82%);
+
+$gradient: linear-gradient(179.94deg,
+        rgba(0, 166, 166, 0.1) 0.05%,
+        rgba(0, 166, 166, 0.09) 50%,
+        rgba(0, 166, 166, 0.1) 99.95%);
+$sidebarGradient: linear-gradient(90deg, #f574a9 0%, #f78876 98.73%);
+$sidebarHover: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(11, 141, 136, 0.7) 100%);
+$buttonGradient: linear-gradient(90deg, #25A2FA 0%, #0B8D88 100%);
+
+$buttonGradientHover: linear-gradient(90deg, #0B8D88 0%, #25A2FA 98.73%);
+$bgGradient: linear-gradient(140deg, #e3e4e9 0%, #dfe3f2 98.73%);
+
+//box shaddow
+$boxShadow2: 0px 6px 16px rgba(0, 0, 0, 0.12);
