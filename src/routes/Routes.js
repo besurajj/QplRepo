@@ -34,9 +34,9 @@ const router = createBrowserRouter([
   {
     path: ROUTES.ADMIN,
     element: (
-      // <AuthGuard>
+      <AuthGuard>
       <PrimaryLayouts />
-      // </AuthGuard>
+      </AuthGuard>
     ),
     children: [
       // Redirect /admin to Dashboard

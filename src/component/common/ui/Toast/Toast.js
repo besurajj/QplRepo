@@ -13,26 +13,33 @@ const toastOptions = {
   theme: "light",
 };
 
+
 class Toaster {
   success = (message) => {
     toast.success(message, {
       ...toastOptions,
     });
+     
   };
   error = (message) => {
     toast.error(message, {
       ...toastOptions,
     });
+    
   };
   warn = (message) => {
     toast.warn(message, {
       ...toastOptions,
     });
+       
   };
   info = (message) => {
     toast.info(message, {
       ...toastOptions,
     });
+   
+    
   };
+
 }
 export const toasts = new Toaster();

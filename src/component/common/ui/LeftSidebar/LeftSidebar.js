@@ -51,7 +51,7 @@ const LeftSidebar = ({ name, ...props }) => {
       to: ROUTES.CREATE_EXAM,
     },
     {
-      home_icon: CreatePaper,
+      home_icon: CreateExam,
       title: "Create Question Paper",
       to: ROUTES.CREATE_PAPER,
     },

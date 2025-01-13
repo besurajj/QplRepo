@@ -18,6 +18,7 @@ const API_URLS = {
   USERS: "api/v1/admin/details",
   LOGIN: "api/v1/exam_board/login",
   VERIFY_OTP: "api/v1/auth/verify_otp",
+  RESEND_OTP: "api/v1/auth/resend_otp",
   LOGOUT: "api/v1/auth/logout",
   GET_EXAMS: "api/v1/exam_board/exams",
   GET_PAPER: "api/v1/maintainers/set-paper/:id",

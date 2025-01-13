@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { apiCallPost } from "../../../../../axios/axios";
 import { API_URLS } from "../../../../../utils/constants";
 
-const OtpModal = ({ show, handleClose, navigateTo, email ,onHide}) => {
+const OtpModal = ({ show, handleClose, navigateTo, email, onHide }) => {
   const navigate = useNavigate();
   const [otp, setOtp] = useState("");
   const [error, setError] = useState("");
@@ -30,10 +30,9 @@ const OtpModal = ({ show, handleClose, navigateTo, email ,onHide}) => {
       );
       if (!res?.error) {
         console.log("OTP verification successful", res);
-        toast.success("OTP verified successfully!");
+        toast.success(res?.message);
         localStorage.setItem("token", res?.data?.token);
         navigate(navigateTo);
-
       } else {
         throw new Error("OTP verification failed!");
       }
@@ -41,6 +40,28 @@ const OtpModal = ({ show, handleClose, navigateTo, email ,onHide}) => {
       console.error("Error during OTP verification:", error);
       toast.error("OTP verification failed. Please try again.");
     }
+  };
+
+  const reSendOtp = async () => {
+    try {
+      const payload = {
+        email: email,
+        type: "SignIn",
+      };
+      let res = await apiCallPost(
+        API_URLS.RESEND_OTP,
+        payload,
+        {},
+        false,
+        false
+      );
+      if (!res?.error) {
+        console.log("OTP Sent !!", res);
+        toast.success("OTP Sent !");
+      } else {
+        throw new Error("OTP verification failed!");
+      }
+    } catch (error) {}
   };
 
   const handleSubmit = (e) => {
@@ -54,6 +75,10 @@ const OtpModal = ({ show, handleClose, navigateTo, email ,onHide}) => {
       setError("Invalid OTP. Please try again.");
       toast.error("Invalid OTP. Please try again.");
     }
+  };
+
+  const handleResend = () => {
+    reSendOtp();
   };
 
   return (
@@ -72,7 +97,7 @@ const OtpModal = ({ show, handleClose, navigateTo, email ,onHide}) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="px-4 pt-3">
-        <div className="d-flex justify-content-center align-items-center otp-input mb-3">
+        <div className="d-flex justify-content-center align-items-center otp-input mb-3 text-center">
           <OTPInput
             value={otp}
             onChange={setOtp}
@@ -87,6 +112,7 @@ const OtpModal = ({ show, handleClose, navigateTo, email ,onHide}) => {
               boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
               outline: "none",
               transition: "border-color 0.2s ease-in-out",
+              textAlign: "center",
             }}
             skipDefaultStyles
             renderSeparator={<span className="mx-1"></span>}
@@ -101,9 +127,11 @@ const OtpModal = ({ show, handleClose, navigateTo, email ,onHide}) => {
         <div className="text-center mb-3">
           <small className="text-muted">
             Didn't receive the code?{" "}
-            <a href="#" className="text-success text-decoration-none">
-              Resend
-            </a>
+            <Button onClick={handleResend} className="bg-transparent border-0 ">
+              <a href="#" className="text-success text-decoration-none fs-4 ">
+                Resend
+              </a>
+            </Button>
           </small>
         </div>
       </Modal.Body>
